@@ -1,0 +1,226 @@
+// Переменные
+$main-color: #231815;
+$font-family: Lato, sans-serif;
+$font-size-base: 16px;
+$white: #FFFFFF;
+$black: #000;
+$border-radius: 88.64px;
+
+// Основные стили
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: $font-family;
+  font-weight: normal;
+  font-size: $font-size-base;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+// Pre-header
+.pre-header {
+  background: $main-color;
+
+  &__line {
+    font-size: $font-size-base;
+    font-weight: 400;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    color: $white;
+    justify-content: flex-end;
+
+    &-item {
+      margin-right: 70px;
+      color: $white;
+    }
+  }
+}
+
+// Header
+header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: $main-color;
+  justify-content: space-between;
+  margin-bottom: 60px;
+
+  .header-logo {
+    height: 56.38px;
+    width: 217px;
+    margin-right: 100px; // Фиксированный отступ справа от логотипа
+  }
+
+  img {
+    display: block;
+  }
+
+  .header__list {
+    display: flex;
+
+    &-item {
+      display: flex;
+
+      & a {
+        color: $main-color;
+      }
+
+      &:not(:last-child) {
+        margin-right: 100px;
+      }
+    }
+  }
+  
+  text{
+    color: red;
+  }
+  .search-input {
+    border-radius: $border-radius;
+    color: $black;
+    height: 39px;
+    width: 170px;
+    padding: 21px;
+    border: 1px solid #F5F5F5;
+    background-image: url(/img/search-normal.svg);
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 21px 21px;
+    margin-right: 20px;
+
+    &::placeholder {
+       color:$main-color;
+      }
+
+    
+  }
+
+  .header-right {
+    display: flex;
+
+    
+
+ 
+
+    .link {
+        border-radius: 100px;
+        width: 138px;
+        height: 39px;
+        background: $black;
+        display: flex;
+        align-items: center;
+        color: $white;
+        gap: 12px;
+        padding: 0 19px;
+    }
+    
+    .link-img {
+        width: 18px;
+        height: 24px;
+       
+      }
+  }
+}
+
+// Основной контент
+main {
+  flex: 1;
+}
+.search{
+  @font-face {
+    font-family: "Korataki" ;
+    src: url(/fonts/Korataki.ttf);
+  }
+    font-family: "Korataki";
+      font-weight: 400;
+      font-size: 44px;
+      margin-bottom: 40px;
+  }
+
+
+  .product {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // 4 колонки
+    column-gap: 40px; // Отступ между карточками по горизонтали
+    row-gap: 50px; // Отступ между карточками по вертикали
+    padding: 16px; // Отступы вокруг сетки
+
+
+
+
+    
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin-bottom: 60px;
+  
+    &__image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  
+    &__title {
+      font-size: 1.2rem;
+      margin: 12px 0;
+    }
+  
+    &__description {
+      font-size: 0.9rem;
+      color: #666;
+    }
+  
+    &__price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #333;
+      margin: 12px 0;
+    }
+  
+    &__button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+
+
+
+
+// Футер
+footer {
+  background: #0C0C0C;
+  color: $white;
+  padding: 20px;
+  text-align: center;
+  height: 320px;
+}
