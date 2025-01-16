@@ -7,6 +7,7 @@ body {
   font-family: Lato, sans-serif;
   font-weight: normal;
   font-size: 16px;
+  
 }
 
 * {
@@ -109,7 +110,8 @@ header .header-right .link-img {
 }
 
 main {
-  flex: 1;
+  flex: 1; /* Основной контент занимает всё свободное пространство */
+  min-height: calc(100vh - 320px - 80px - 60px); /* Высота минус футер, header и margin */
 }
 
 .search {
@@ -123,52 +125,72 @@ main {
   src: url(/fonts/Korataki.ttf);
 }
 
-.product {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 40px;
-  row-gap: 50px;
-  padding: 16px;
+.product-card .more{
+  display: none;
 }
 
-.product-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  text-align: center;
-  background-color: #f9f9f9;
+.product{
+  display: flex;
+  gap: 40px;
   margin-bottom: 60px;
+  flex-wrap: wrap;
+  font-family: Lato, sans-serif;
 }
-.product-card__image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+
+.product-card{
+  position: relative;
+  border-radius: 20px;
+  width: 320px;
 }
-.product-card__title {
-  font-size: 1.2rem;
-  margin: 12px 0;
-}
-.product-card__description {
-  font-size: 0.9rem;
-  color: #666;
-}
-.product-card__price {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #333;
-  margin: 12px 0;
-}
-.product-card__button {
-  background-color: #007bff;
+
+.product-card:hover  .more{
+  display: inline;
+  position: absolute;
+  display: flex;
+ align-items: center;
+  top: 409px;
+  border-radius: 100px;
+  left: 31px;
+  text-align: center;
   color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
+  background: #E45302;
+  padding: 13px 87px;
+
+  transition: opacity 0.5s ease, visibility 0.5s ease; /* Анимация для opacity и visibility */
 }
-.product-card__button:hover {
-  background-color: #0056b3;
+span{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 8px 40px;
+  background: #231815;
+  border-radius: 100px;
+  color: white;
 }
+
+
+.price{
+  display: flex;
+  column-gap: 16px;
+  font-weight: 700;
+  font-size: 22px;
+  align-items: center;
+}
+
+.correct-price{
+  
+  color: #E45302;
+}
+
+
+.old-price{
+  color:#808080;
+
+}
+
+
+
+
 
 footer {
   background: #0C0C0C;
