@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Roboto" ;
-  src: url(/fonts/Roboto-Regular.ttf);
+  src: url("/fonts/Roboto-Regular.ttf");
 }
 
 
@@ -302,14 +302,14 @@ main {
 }
 
  h1 {
-  font-family: "Korataki";
+  font-family: "Korataki", sans-serif;
   font-weight: 400;
   font-size: 44px;
   margin-bottom: 40px;
 }
 @font-face {
   font-family: "Korataki";
-  src: url(/fonts/Korataki.ttf);
+  src: url("/fonts/Korataki.ttf");
 }
 
 
@@ -321,7 +321,7 @@ footer {
   background: #0C0C0C;
   color: #FFFFFF;
   padding: 60px 0;
-  font-family: Roboto;
+  font-family: "Roboto",sans-serif;
 
   padding: 60px 0;
   
@@ -381,7 +381,7 @@ footer {
 
 .column .copyrite{
   color: #808080;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
 }
 
 .column .copyrite a{
