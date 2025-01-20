@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "Roboto-Regular" ;
+  font-family: "Roboto" ;
   src: url("/fonts/Roboto-Regular.ttf");
 }
 
 @font-face {
   font-family: Korataki;
 
-  src:  url("/fonts/Korataki.ttf") format('truetype'); 
+  src:  url("/fonts/Korataki.ttf"); 
 
 
 
