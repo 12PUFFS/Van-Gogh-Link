@@ -1,6 +1,6 @@
 @font-face {
   font-family:Roboto ;
-  src: url(./fonts/Roboto-Regular.ttf);
+  src: url("/fonts/Roboto-Regular.ttf");
 }
 
 
@@ -309,7 +309,7 @@ main {
 }
 @font-face {
   font-family: "Korataki";
-  src: url(./fonts/Korataki.ttf);
+  src: url("/fonts/Korataki.ttf");
 }
 
 
