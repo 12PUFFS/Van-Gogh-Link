@@ -3,6 +3,11 @@
   src: url("/fonts/Roboto-Regular.ttf");
 }
 
+@font-face {
+  font-family: Korataki;
+  src:  url("/fonts/Korataki.ttf") format('truetype'); 
+}
+
 
 html, body {
   height: 100%;
@@ -307,14 +312,7 @@ main {
   font-size: 44px;
   margin-bottom: 40px;
 }
-@font-face {
-  font-family: "Korataki";
-  src: url("/fonts/Korataki.woff2") format('woff2'), /* Современный формат */
-       url("/fonts/Korataki.woff") format('woff'),   /* Стандартный формат */
-       url("/fonts/Korataki.ttf") format('truetype'); /* Резервный формат */
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 
 
