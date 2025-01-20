@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Roboto" ;
-  src: url(/fonts/Roboto-Regular.ttf);
+  font-family: "Roboto-Regular" ;
+  src: url("/fonts/Roboto-Regular.ttf");
 }
 
 
@@ -134,7 +134,7 @@ header .search-input {
   width: 170px;
   padding: 21px;
   border: 1px solid #F5F5F5;
-  background-image: url(/img/search-normal.svg);
+  background-image: url(./img/search-normal.svg);
   background-repeat: no-repeat;
   background-position: right 14px center;
   background-size: 21px 21px;
@@ -252,6 +252,19 @@ header .header-right .link-img {
 .menu{
   display: none
 }
+
+ h1 {
+  font-family: "Korataki", sans-serif;
+  font-weight: 400;
+  font-size: 44px;
+  margin-bottom: 40px;
+}
+@font-face {
+  font-family: Korataki;
+  src:  url("/fonts/Korataki.ttf") format('truetype'); 
+}
+
+
 
 /* Адаптация для экранов ≤ 770px */
 @media (max-width: 775px) {
