@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: Korataki;
-  src: url("/fonts/koratakieb-regular.otf");
+  src: url(/fonts/koratakieb-regular.otf);
 }
 
 
@@ -76,6 +76,7 @@ display: none;
 
 }
 
+
 .price{
   display: flex;
   gap: 16px;
@@ -139,11 +140,13 @@ header .search-input {
   width: 170px;
   padding: 21px;
   border: 1px solid #F5F5F5;
-  background-image: url(./img/search-normal.svg);
+  background-image: url(/img/search-normal.svg);
+  
   background-repeat: no-repeat;
   background-position: right 14px center;
   background-size: 21px 21px;
   margin-right: 20px;
+ 
 }
 header .search-input::placeholder {
   color: #231815;
@@ -292,6 +295,18 @@ header .header-right .link-img {
  
 }
 
+@media (max-width: 395px) {
+  .container {
+    max-width: 320px; /* Ограничиваем максимальную ширину контейнера */
+    
+  
+  }
+
+  .product-grid{
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки с равной шириной */
+    gap: 10px; /* Уменьшаем отступы для маленьких экранов */
+  }
+}
 
 
 
