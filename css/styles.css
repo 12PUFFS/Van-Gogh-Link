@@ -1,3 +1,9 @@
+@font-face {
+  font-family:Roboto ;
+  src: url(/fonts/Roboto-Regular.ttf);
+}
+
+
 html, body {
   height: 100%;
   margin: 0;
@@ -24,6 +30,54 @@ a {
   max-width: 1400px;
   margin: 0 auto;
 }
+
+@media(max-width:775px){
+  
+.container{
+  max-width: 680px;
+  
+  
+}
+.pre-header{
+  display: none;
+}
+.header-nav{
+  display: none;
+}
+ .container h1{
+  font-size: 32px;
+  
+}
+input{
+  display: none;
+}
+header .header-right .link {
+  display: none;
+}
+
+.search{
+display: none;
+} 
+
+.desc h3{
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+}
+
+.price{
+  display: flex;
+  gap: 16px;
+}
+
+
+
 
 .pre-header {
   background: #231815;
@@ -56,9 +110,7 @@ header .header-logo {
   width: 217px;
   margin-right: 100px;
 }
-header img {
-  display: block;
-}
+
 header .header__list {
   display: flex;
 }
@@ -66,6 +118,7 @@ header .header__list-item {
   display: flex;
 }
 header .header__list-item a {
+  text-transform: uppercase;
   color: #231815;
 }
 header .header__list-item:not(:last-child) {
@@ -103,18 +156,152 @@ header .header-right .link {
   color: #FFFFFF;
   gap: 12px;
   padding: 0 19px;
+  position: relative;
 }
 header .header-right .link-img {
   width: 18px;
   height: 24px;
+  
 }
+
+.link-img{
+}
+
+.badge{
+  top: 3px;
+  left: 28px;
+  
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  color: #000;
+  border-radius: 100px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+} 
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 290px); /* Автоматически адаптируется */
+  gap: 50px 70px; /* Вертикальный gap 40px, горизонтальный 50px */
+  
+  margin-bottom: 60px;
+ 
+}
+
+.product-card {
+  width: 318px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18pxж
+}
+
+.product-card{
+  position: relative;
+}
+
+.product-card {
+  display: block;
+}
+
+.product-card:hover .hidden{
+  display: flex;
+  
+}
+
+.desc p{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  background: #231815;
+  padding: 8px 40px;
+  font-weight: 600;
+  border-radius: 100px;
+
+}
+
+.hidden{
+  position: absolute;
+  top: 389px;
+  left: 0;
+  background-color: rgba(245, 245, 245, 0.7);
+  width: 320px;
+  height: 88px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  align-items: center;
+  display: none;
+}
+
+.hidden span{
+  background: #E45302;
+  color: white;
+  padding: 13px 87px;
+  border-radius: 100px;
+}
+.menu{
+  display: none
+}
+
+/* Адаптация для экранов ≤ 770px */
+@media (max-width: 775px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки с равной шириной */
+    gap: 30px; /* Уменьшаем отступы для маленьких экранов */
+  }
+  
+  .product-card {
+    width: 100%; /* Карточки занимают всю ширину колонки */
+  }
+  header .header-right .link{
+    display: none;
+  }
+
+  .menu{
+    display: flex;
+    cursor: pointer;
+  }
+  
+
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 main {
   flex: 1; /* Основной контент занимает всё свободное пространство */
   min-height: calc(100vh - 320px - 80px - 60px); /* Высота минус футер, header и margin */
 }
 
-.search {
+ h1 {
   font-family: "Korataki";
   font-weight: 400;
   font-size: 44px;
@@ -125,68 +312,6 @@ main {
   src: url(/fonts/Korataki.ttf);
 }
 
-.product-card .more{
-  display: none;
-}
-
-.product{
-  display: flex;
-  gap: 40px;
-  margin-bottom: 60px;
-  flex-wrap: wrap;
-  font-family: Lato, sans-serif;
-}
-
-.product-card{
-  position: relative;
-  border-radius: 20px;
-  width: 320px;
-}
-
-.product-card:hover  .more{
-  display: inline;
-  position: absolute;
-  display: flex;
- align-items: center;
-  top: 409px;
-  border-radius: 100px;
-  left: 31px;
-  text-align: center;
-  color: white;
-  background: #E45302;
-  padding: 13px 87px;
-
-  transition: opacity 0.5s ease, visibility 0.5s ease; /* Анимация для opacity и visibility */
-}
-span{
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  padding: 8px 40px;
-  background: #231815;
-  border-radius: 100px;
-  color: white;
-}
-
-
-.price{
-  display: flex;
-  column-gap: 16px;
-  font-weight: 700;
-  font-size: 22px;
-  align-items: center;
-}
-
-.correct-price{
-  
-  color: #E45302;
-}
-
-
-.old-price{
-  color:#808080;
-
-}
 
 
 
@@ -195,9 +320,74 @@ span{
 footer {
   background: #0C0C0C;
   color: #FFFFFF;
-  padding: 20px;
-  text-align: center;
-  height: 320px;
+  padding: 60px 0;
+  font-family: Roboto;
+
+  padding: 60px 0;
+  
 }
+/* 
+.footer__column:not(:last-child){
+
+  align-items: center;
+} */
+
+.footer__column{
+  display: flex;
+  justify-content: space-between;
+ flex:1 1;
+}
+
+.footer__img{
+  margin-bottom: 53px;
+}
+
+.column a{}
+ 
+
+ .column-heading{
+  margin-bottom: 38px;
+} 
+
+.column-heading a {
+  margin-top: 20px;
+  display: block;
+  color: white;
+}
+
+.media{
+  display: flex;
+  align-items: center;
+ justify-content: space-between;
+ margin-top: 110px;
+}
+
+
+
+
+
+.column-public{
+  color: #808080;
+  display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+}
+
+.public-heading{
+  padding-bottom: 20px;
+
+}
+
+.column .copyrite{
+  color: #808080;
+  font-family: Roboto;
+}
+
+.column .copyrite a{
+  color:  #808080;
+  text-decoration: underline;
+}
+
 
 /*# sourceMappingURL=styles.css.map */
