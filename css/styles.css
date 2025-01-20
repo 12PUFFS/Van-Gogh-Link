@@ -1,5 +1,5 @@
 @font-face {
-  font-family:Roboto ;
+  font-family:"Roboto" ;
   src: url("/fonts/Roboto-Regular.ttf");
 }
 
@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-  font-family: Lato, sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: normal;
   font-size: 16px;
   
