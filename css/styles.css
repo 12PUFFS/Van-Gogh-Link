@@ -254,14 +254,14 @@ header .header-right .link-img {
 }
 
  h1 {
-  font-family: "Korataki", sans-serif;
+  font-family: Korataki, sans-serif;
   font-weight: 400;
   font-size: 44px;
   margin-bottom: 40px;
 }
 @font-face {
   font-family: Korataki;
-  src:  url("/fonts/Korataki.ttf") format('truetype'); 
+  src: url(/fonts/Korataki.ttf) format('truetype'); 
 }
 
 
