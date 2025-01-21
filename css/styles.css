@@ -326,9 +326,11 @@ header .header-right .link-img {
   
   }
 
-  .hidden{
+  .desc .hidden{
    
   display: none;
+  width: 0;
+  height: 0;
   
  }
 
