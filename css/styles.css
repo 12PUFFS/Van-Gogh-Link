@@ -311,7 +311,16 @@ header .header-right .link-img {
   .hidden{
      top: 397px;
   left: 0;
-   width: 325px;
+   width: 200px;
+
+  }
+
+  .desc p{
+    width: 70px;
+    height: 24px;
+    padding: 2px 15px;
+    font-size: 14px;
+    font-weight: ;
   }
   
 
@@ -329,8 +338,12 @@ header .header-right .link-img {
   .hidden{
     top: 135px;
     left: 0;
-  width: 145px;
+  width: 70px;
   
+ }
+
+ header .header-logo {
+  margin-right: 0;
  }
 
  span{
