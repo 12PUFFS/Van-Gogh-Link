@@ -1,12 +1,12 @@
-изображения карточек адаптивны и растягтваются ?  
+
 @font-face {
   font-family: "Roboto" ;
-  src: url("/fonts/Roboto-Regular.ttf");
+  src: url("../fonts/Roboto-Regular.ttf");
 }
 
 @font-face {
   font-family: Korataki;
-  src: url(/fonts/Korataki.ttf);
+  src: url("../fonts/Korataki.ttf");
   
 }
 
@@ -72,8 +72,11 @@ display: none;
 
 }
 
-.desc h3{
+ .desc h3{
   margin-top: 20px;
+  font-family: 'Lato', sans-serif; 
+  font-size: 18px;
+  font-weight: 700;
 }
 
 
@@ -82,7 +85,7 @@ display: none;
   gap: 16px;
   margin-top: 12px;
   font-size: 22px;
-  font-family: "Lato";
+  font-family: "Lato",sans-serif;
   font-weight: 700;
 }
 
@@ -153,7 +156,7 @@ header .search-input {
   width: 170px;
   padding: 21px;
   border: 1px solid #F5F5F5;
-  background-image: url("/img/search-normal.svg");
+  background-image: url("../img/search-normal.svg");
   
   background-repeat: no-repeat;
   background-position: right 14px center;
@@ -312,6 +315,21 @@ header .header-right .link-img {
      top: 397px;
   left: 0;
    width: 325px;
+  }
+
+  .header-logo{
+    width: 141px;
+    height: 36px;
+  }
+
+  header.header{
+    margin-bottom: 40px;
+    display: flex
+;
+        flex-direction: row;
+      
+        justify-content: space-between;
+        align-items: flex-end;
   }
   
 
